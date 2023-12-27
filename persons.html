@@ -4,49 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>МИР ЛИЗИНГА | Электронный журнал</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
     <div class="page">
-        <div class="overlay">
-            <div class="popup">
-                <button type="button" class="popup__close-btn">
-                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 18L19 1" stroke="#A6DFEE" stroke-width="2" stroke-linecap="round" />
-                        <path d="M1 1L19 18" stroke="#A6DFEE" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                </button>
-                <h2 class="popup__heading">
-                    Задать вопрос
-                </h2>
-                <form action="" class="popup__form">
-                    <fieldset class="popup__form-fieldset">
-                        <input type="text" name="name" placeholder="Ваше имя" class="form__input popup__form-input">
-                    </fieldset>
-                    <fieldset class="popup__form-fieldset">
-                        <input type="text" name="email" placeholder="E-mail" class="form__input popup__form-input">
-                    </fieldset>
-                    <fieldset class="popup__form-fieldset">
-                        <input type="text" name="tel" placeholder="+7 (000) 000-00-00"
-                            class="form__input popup__form-input">
-                    </fieldset>
-                    <fieldset class="popup__form-fieldset">
-                        <textarea name="message" placeholder="Сообщение"
-                            class="form__input popup__form-textarea"></textarea>
-                    </fieldset>
-                    <label class="form__checkbox-wrapper">
-                        <input type="checkbox" name="agree" style="display: none;" id="">
-                        <div class="form__checkbox"></div>
-                        Я принимаю условия пользовательского соглашения
-                    </label>
-                    <button type="submit" class="btn form__btn">
-                        Отправить
-                    </button>
-                </form>
-            </div>
-        </div>
         <div class="mobile-menu">
             <div class="mobile-menu__body">
                 <nav class="mobile-menu__nav">
@@ -440,264 +403,102 @@
             </div>
         </header>
         <main class="main">
-            <section class="top-news-section">
-                <div class="wrapper top-news-section__wrapper">
-                    <div class="top-news-section__top">
-                        <div class="top-news-section__top-col">
-                            <div class="news-card">
-                                <div class="news-card__image-wrapper">
-                                    <img src="./assets/img/card-img1.jpg"
-                                        alt="Президент ЮАР выступит на первом президентском пленуме по науке, технологиям и инновациям"
-                                        class="news-card__image">
-                                </div>
-                                <div class="news-card__body">
-                                    <div class="news-card__body-row">
-                                        <p class="news-card__date">
-                                            02.12.23023, 16:00
-                                        </p>
-                                        <div class="news-card__tags">
-                                            <a href="#" class="news-card__tag">
-                                                #ЮАР
-                                            </a>
-                                            <a href="#" class="news-card__tag">
-                                                #наука
-                                            </a>
-                                        </div>
-                                        <button type="button" class="news-card__fav-btn">
-                                        </button>
-                                    </div>
-                                    <p class="news-card__heading">
-                                        Президент ЮАР выступит на первом президентском пленуме по науке, технологиям и
-                                        инновациям
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="top-news-section__top-blocks">
-                                <div class="news-card news-card_block">
-                                    <div class="news-card__body">
-                                        <p class="news-card__date">
-                                            03.12.23023, 16:00
-                                        </p>
-                                        <div class="news-card__tags">
-                                            <a href="#" class="news-card__tag">
-                                                #ЮАР
-                                            </a>
-                                            <a href="#" class="news-card__tag">
-                                                #наука
-                                            </a>
-                                        </div>
-                                        <button type="button" class="news-card__fav-btn">
-                                        </button>
-                                        <p class="news-card__heading">
-                                            За год в России цены выросли на 7,48%, на яйца – 40,29%
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="news-card news-card_block">
-                                    <div class="news-card__body">
-                                        <p class="news-card__date">
-                                            03.12.23023, 16:00
-                                        </p>
-                                        <div class="news-card__tags">
-                                            <a href="#" class="news-card__tag">
-                                                #ЮАР
-                                            </a>
-                                            <a href="#" class="news-card__tag">
-                                                #наука
-                                            </a>
-                                        </div>
-                                        <button type="button" class="news-card__fav-btn">
-                                        </button>
-                                        <p class="news-card__heading">
-                                            На 17 счетов блогера Аяза Шабутдинова наложен арест
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="top-news-section__top-col">
-                            <div class="player">
-                                <video src="./assets/video/video.mp4" muted autoplay class="player__video"></video>
-                            </div>
-                            <img src="./assets/img/news-banner.jpg" alt="News Banner" class="top-news-section__banner">
-                            <div class="top-news-section__top-blocks">
-                                <div class="news-card news-card_block">
-                                    <div class="news-card__body">
-                                        <p class="news-card__date">
-                                            03.12.23023, 16:00
-                                        </p>
-                                        <div class="news-card__tags">
-                                            <a href="#" class="news-card__tag">
-                                                #ЮАР
-                                            </a>
-                                            <a href="#" class="news-card__tag">
-                                                #наука
-                                            </a>
-                                        </div>
-                                        <button type="button" class="news-card__fav-btn">
-                                        </button>
-                                        <p class="news-card__heading">
-                                            За год в России цены выросли на 7,48%, на яйца – 40,29%
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="news-card news-card_block">
-                                    <div class="news-card__body">
-                                        <p class="news-card__date">
-                                            03.12.23023, 16:00
-                                        </p>
-                                        <div class="news-card__tags">
-                                            <a href="#" class="news-card__tag">
-                                                #ЮАР
-                                            </a>
-                                            <a href="#" class="news-card__tag">
-                                                #наука
-                                            </a>
-                                        </div>
-                                        <button type="button" class="news-card__fav-btn">
-                                        </button>
-                                        <p class="news-card__heading">
-                                            На 17 счетов блогера Аяза Шабутдинова наложен арест
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <section class="person-section">
+                <div class="wrapper person-section__wrapper">
+                    <h1 class="person-section__heading">
+                        ПЕРСОНЫ ЛИЗИНГА
+                    </h1>
+                    <ul class="person-section__list">
+                        <li class="person-section__card">
+                            <img src="./assets/img/person-card-img1.png" alt="
+                                Иванов" class="person-section__card-img">
+                            <h2 class="person-section__card-heading">
+                                Иванов
+                            </h2>
+                            <p class="person-section__card-text">
+                                Иван Иванович
+                            </p>
+                        </li>
+                        <li class="person-section__card">
+                            <img src="./assets/img/person-card-img1.png" alt="
+                                Иванов" class="person-section__card-img">
+                            <h2 class="person-section__card-heading">
+                                Иванов
+                            </h2>
+                            <p class="person-section__card-text">
+                                Иван Иванович
+                            </p>
+                        </li>
+                        <li class="person-section__card">
+                            <img src="./assets/img/person-card-img1.png" alt="
+                                Иванов" class="person-section__card-img">
+                            <h2 class="person-section__card-heading">
+                                Иванов
+                            </h2>
+                            <p class="person-section__card-text">
+                                Иван Иванович
+                            </p>
+                        </li>
+                        <li class="person-section__card">
+                            <img src="./assets/img/person-card-img1.png" alt="
+                                Иванов" class="person-section__card-img">
+                            <h2 class="person-section__card-heading">
+                                Иванов
+                            </h2>
+                            <p class="person-section__card-text">
+                                Иван Иванович
+                            </p>
+                        </li>
+                        <li class="person-section__card">
+                            <img src="./assets/img/person-card-img1.png" alt="
+                                Иванов" class="person-section__card-img">
+                            <h2 class="person-section__card-heading">
+                                Иванов
+                            </h2>
+                            <p class="person-section__card-text">
+                                Иван Иванович
+                            </p>
+                        </li>
+                        <li class="person-section__card">
+                            <img src="./assets/img/person-card-img1.png" alt="
+                                Иванов" class="person-section__card-img">
+                            <h2 class="person-section__card-heading">
+                                Иванов
+                            </h2>
+                            <p class="person-section__card-text">
+                                Иван Иванович
+                            </p>
+                        </li>
+                        <li class="person-section__card">
+                            <img src="./assets/img/person-card-img1.png" alt="
+                                Иванов" class="person-section__card-img">
+                            <h2 class="person-section__card-heading">
+                                Иванов
+                            </h2>
+                            <p class="person-section__card-text">
+                                Иван Иванович
+                            </p>
+                        </li>
+                        <li class="person-section__card">
+                            <img src="./assets/img/person-card-img1.png" alt="
+                                Иванов" class="person-section__card-img">
+                            <h2 class="person-section__card-heading">
+                                Иванов
+                            </h2>
+                            <p class="person-section__card-text">
+                                Иван Иванович
+                            </p>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn_outline person-section__btn">
+                        Показать еще
+                    </a>
                 </div>
             </section>
             <section class="banner-section">
                 <div class="wrapper banner-section__wrapper">
                     <img src="./assets/img/banners-section.jpg" alt="Banner" class="banner-section__img">
                     <img src="./assets/img/banners-section.jpg" alt="Banner" class="banner-section__img">
-                </div>
-            </section>
-            <section class="bottom-news-section">
-                <div class="wrapper bottom-news-section__wrapper">
-                    <div class="bottom-news-section__group">
-                        <div class="news-card news-card_bg">
-                            <p class="news-card__date">
-                                02.12.23023, 16:00
-                            </p>
-                            <div class="news-card__tags">
-                                <a href="#" class="news-card__tag">
-                                    #ЮАР
-                                </a>
-                                <a href="#" class="news-card__tag">
-                                    #наука
-                                </a>
-                            </div>
-                            <p class="news-card__heading">
-                                Президент ЮАР выступит на первом президентском пленуме по науке, технологиям и
-                                инновациям
-                            </p>
-                            <img src="./assets/img/card-img1.jpg"
-                                alt="Президент ЮАР выступит на первом президентском пленуме по науке, технологиям и инновациям"
-                                class="news-card__image">
-                        </div>
-                        <div class="bottom-news-section__rows">
-                            <div class="news-card news-card_row">
-                                <p class="news-card__date">
-                                    02.12.23023, 16:00
-                                </p>
-                                <p class="news-card__heading">
-                                    Президент ЮАР выступит на первом президентском пленуме по науке, технологиям и
-                                    инновациям
-                                </p>
-                            </div>
-                            <div class="news-card news-card_row">
-                                <p class="news-card__date">
-                                    02.12.23023, 16:00
-                                </p>
-                                <p class="news-card__heading">
-                                    Президент ЮАР выступит на первом президентском пленуме по науке, технологиям и
-                                    инновациям
-                                </p>
-                            </div>
-                            <div class="news-card news-card_row">
-                                <p class="news-card__date">
-                                    02.12.23023, 16:00
-                                </p>
-                                <p class="news-card__heading">
-                                    Президент ЮАР выступит на первом президентском пленуме по науке, технологиям и
-                                    инновациям
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bottom-news-section__block-list">
-                        <div class="news-card news-card_block">
-                            <div class="news-card__body">
-                                <p class="news-card__date">
-                                    03.12.23023, 16:00
-                                </p>
-                                <div class="news-card__tags">
-                                    <a href="#" class="news-card__tag">
-                                        #экономика
-                                    </a>
-                                </div>
-                                <button type="button" class="news-card__fav-btn">
-                                </button>
-                                <p class="news-card__heading">
-                                    За год в России цены выросли на 7,48%, на яйца – 40,29%
-                                </p>
-                            </div>
-                        </div>
-                        <div class="news-card news-card_block">
-                            <div class="news-card__body">
-                                <p class="news-card__date">
-                                    03.12.23023, 16:00
-                                </p>
-                                <div class="news-card__tags">
-                                    <a href="#" class="news-card__tag">
-                                        #экономика
-                                    </a>
-                                </div>
-                                <button type="button" class="news-card__fav-btn">
-                                </button>
-                                <p class="news-card__heading">
-                                    За год в России цены выросли на 7,48%, на яйца – 40,29%
-                                </p>
-                            </div>
-                        </div>
-                        <div class="news-card news-card_block">
-                            <div class="news-card__body">
-                                <p class="news-card__date">
-                                    03.12.23023, 16:00
-                                </p>
-                                <div class="news-card__tags">
-                                    <a href="#" class="news-card__tag">
-                                        #экономика
-                                    </a>
-                                </div>
-                                <button type="button" class="news-card__fav-btn">
-                                </button>
-                                <p class="news-card__heading">
-                                    За год в России цены выросли на 7,48%, на яйца – 40,29%
-                                </p>
-                            </div>
-                        </div>
-                        <div class="news-card news-card_block">
-                            <div class="news-card__body">
-                                <p class="news-card__date">
-                                    03.12.23023, 16:00
-                                </p>
-                                <div class="news-card__tags">
-                                    <a href="#" class="news-card__tag">
-                                        #экономика
-                                    </a>
-                                </div>
-                                <button type="button" class="news-card__fav-btn">
-                                </button>
-                                <p class="news-card__heading">
-                                    За год в России цены выросли на 7,48%, на яйца – 40,29%
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn btn_outline bottom-news-section__btn">
-                        Все новости
-                    </a>
                 </div>
             </section>
         </main>
@@ -739,11 +540,6 @@
             </div>
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
-        integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./scripts/menu.js"></script>
 </body>
 
