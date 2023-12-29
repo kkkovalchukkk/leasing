@@ -1,6 +1,7 @@
 'use strict';
 
 window.addEventListener('DOMContentLoaded', () => {
+  const mainEl = document.querySelector('main');
   const menuEl = document.querySelector('.menu');
   const toggleMenuBtnEl = document.querySelectorAll('.toggle-menu');
   const footerToggleMenuBtnEl = document.querySelector('.toggle-menu-footer');
@@ -15,11 +16,13 @@ window.addEventListener('DOMContentLoaded', () => {
   const closeOverlayBtnEl = document.querySelector('.popup__close-btn');
 
   menuEl.classList.add('active');
+  mainEl.classList.add('active');
   menuEl.style.maxHeight = menuEl.scrollHeight + 200 + 'px';
 
   function closeByScroll(e) {
     if (menuEl.classList.contains('active')) {
       menuEl.classList.remove('active');
+      mainEl.classList.remove('active');
       menuEl.style.maxHeight = 0 + 'px';
     }
   }
@@ -29,6 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if (menuEl.classList.contains('active')) {
         window.removeEventListener('scroll', closeByScroll);
         menuEl.classList.remove('active');
+        mainEl.classList.remove('active');
         menuEl.style.maxHeight = 0 + 'px';
       } else {
         window.addEventListener('scroll', closeByScroll);

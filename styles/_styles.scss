@@ -15,6 +15,9 @@ body {
 .main {
   margin-top: 132.5px;
   transition: 0.3s;
+  &.active {
+    margin-top: 464px;
+  }
 }
 
 .wrapper {

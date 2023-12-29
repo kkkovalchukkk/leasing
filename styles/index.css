@@ -168,6 +168,9 @@ body.no-scroll {
   margin-top: 132.5px;
   transition: 0.3s;
 }
+.main.active {
+  margin-top: 464px;
+}
 
 .wrapper {
   width: 100%;
