@@ -171,6 +171,16 @@ body.no-scroll {
 .main.active {
   margin-top: 464px;
 }
+@media (max-width: 1260px) {
+  .main.active {
+    margin-top: 598px;
+  }
+}
+@media (max-width: 1260px) and (max-width: 768px) {
+  .main.active {
+    margin-top: 120px;
+  }
+}
 
 .wrapper {
   width: 100%;

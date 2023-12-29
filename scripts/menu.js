@@ -26,8 +26,12 @@ window.addEventListener('DOMContentLoaded', () => {
         mainEl.classList.remove('active');
         menuEl.style.maxHeight = 0 + 'px';
       } else {
+        console.log();
         menuEl.classList.add('active');
         menuEl.style.maxHeight = menuEl.scrollHeight + 200 + 'px';
+        if (!window.screenTop && !window.screenLeft) {
+          mainEl.classList.add('active');
+        }
       }
     })
   );
