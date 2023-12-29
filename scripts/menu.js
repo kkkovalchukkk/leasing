@@ -19,23 +19,13 @@ window.addEventListener('DOMContentLoaded', () => {
   mainEl.classList.add('active');
   menuEl.style.maxHeight = menuEl.scrollHeight + 200 + 'px';
 
-  function closeByScroll(e) {
-    if (menuEl.classList.contains('active')) {
-      menuEl.classList.remove('active');
-      mainEl.classList.remove('active');
-      menuEl.style.maxHeight = 0 + 'px';
-    }
-  }
-
   toggleMenuBtnEl.forEach((b) =>
     b.addEventListener('click', () => {
       if (menuEl.classList.contains('active')) {
-        window.removeEventListener('scroll', closeByScroll);
         menuEl.classList.remove('active');
         mainEl.classList.remove('active');
         menuEl.style.maxHeight = 0 + 'px';
       } else {
-        window.addEventListener('scroll', closeByScroll);
         menuEl.classList.add('active');
         menuEl.style.maxHeight = menuEl.scrollHeight + 200 + 'px';
       }
@@ -81,5 +71,15 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.classList.remove('no-scroll');
   });
 
-  window.addEventListener('scroll', closeByScroll);
+  window.addEventListener('scroll', (e) => {
+    if (window.pageYOffset >= 180) {
+      menuEl.classList.remove('active');
+      mainEl.classList.remove('active');
+      menuEl.style.maxHeight = 0 + 'px';
+    } else {
+      menuEl.classList.add('active');
+      mainEl.classList.add('active');
+      menuEl.style.maxHeight = menuEl.scrollHeight + 200 + 'px';
+    }
+  });
 });
