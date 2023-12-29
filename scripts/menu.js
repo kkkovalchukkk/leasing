@@ -11,19 +11,27 @@ window.addEventListener('DOMContentLoaded', () => {
   );
 
   const overlayEl = document.querySelector('.overlay');
-  const toggleOverlayEl = document.querySelector('.menu__answer-btn');
+  const toggleOverlayEl = document.querySelectorAll('.toggle-popup');
   const closeOverlayBtnEl = document.querySelector('.popup__close-btn');
 
-  menuEl.style.maxHeight = menuEl.scrollHeight + 200 + 'px';
   menuEl.classList.add('active');
+  menuEl.style.maxHeight = menuEl.scrollHeight + 200 + 'px';
+
+  function closeByScroll(e) {
+    if (menuEl.classList.contains('active')) {
+      menuEl.classList.remove('active');
+      menuEl.style.maxHeight = 0 + 'px';
+    }
+  }
 
   toggleMenuBtnEl.forEach((b) =>
     b.addEventListener('click', () => {
-      window.scrollTo(0, 0);
       if (menuEl.classList.contains('active')) {
+        window.removeEventListener('scroll', closeByScroll);
         menuEl.classList.remove('active');
         menuEl.style.maxHeight = 0 + 'px';
       } else {
+        window.addEventListener('scroll', closeByScroll);
         menuEl.classList.add('active');
         menuEl.style.maxHeight = menuEl.scrollHeight + 200 + 'px';
       }
@@ -57,13 +65,17 @@ window.addEventListener('DOMContentLoaded', () => {
     })
   );
 
-  toggleOverlayEl.addEventListener('click', () => {
-    overlayEl.classList.add('active');
-    document.body.classList.add('no-scroll');
-  });
+  toggleOverlayEl.forEach((b) =>
+    b.addEventListener('click', () => {
+      overlayEl.classList.add('active');
+      document.body.classList.add('no-scroll');
+    })
+  );
 
   closeOverlayBtnEl.addEventListener('click', () => {
     overlayEl.classList.remove('active');
     document.body.classList.remove('no-scroll');
   });
+
+  window.addEventListener('scroll', closeByScroll);
 });

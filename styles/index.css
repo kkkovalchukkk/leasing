@@ -164,6 +164,11 @@ body.no-scroll {
   overflow: hidden;
 }
 
+.main {
+  margin-top: 132.5px;
+  transition: 0.3s;
+}
+
 .wrapper {
   width: 100%;
   height: 100%;
@@ -177,8 +182,13 @@ body.no-scroll {
 
 .header {
   width: 100%;
-  margin-top: 26px;
-  margin-bottom: 40.5px;
+  padding-top: 26px;
+  padding-bottom: 40.5px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 1999;
 }
 .header__top {
   width: 100%;
@@ -239,6 +249,7 @@ body.no-scroll {
   padding: 0;
   transition: 0.3s;
   visibility: hidden;
+  border-top-right-radius: 0px;
   opacity: 0;
 }
 .menu.active {
@@ -254,8 +265,8 @@ body.no-scroll {
 .menu::after {
   content: "";
   position: absolute;
-  right: 0;
-  top: -47.278px;
+  right: -1px;
+  top: -46px;
   width: 106.5px;
   height: 47.278px;
   background-image: url("../assets/img/rounded-menu-triangle-bg.svg");
@@ -1436,10 +1447,11 @@ input[type=checkbox]:checked + .form__checkbox {
   position: fixed;
   left: 0;
   top: 0;
+  padding: 32px;
   width: 100%;
   height: 100%;
   display: flex;
-  z-index: 99;
+  z-index: 99999;
   visibility: hidden;
   opacity: 0;
   transform: translateY(-100%);
@@ -1816,6 +1828,9 @@ input[type=checkbox]:checked + .form__checkbox {
   }
   .person-section__list {
     grid-template-columns: 1fr;
+  }
+  .popup {
+    padding: 24px;
   }
 }
 @media (max-width: 420px) {
